@@ -1,0 +1,140 @@
+html{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight:200;
+    color:grey;
+    max-width:100%;
+    overflow:hidden;
+}
+
+body {
+    padding:0;
+    margin:0;
+    max-width:100%;
+    overflow-x:hidden;
+    background:#D8D8D8;
+}
+
+span{
+    display:inline-block;
+}
+
+#header{
+    z-index:100;
+    width:100%;
+    height: 3em;
+    background:grey;
+    margin:0;
+    border:none;
+}
+
+#logo{
+    height:2em;
+    width:auto;
+    margin:0.5em;
+}
+
+#sideBar{
+    width:30%;
+    /*max-width:30em;*/
+    height:100vh;
+    background:#ECEBEB;
+    border-right:solid 2px black;
+    display:inline-block;
+}
+
+#sideHeader{
+    font-weight:500;
+    font-size:2em;
+    width:100%;
+    text-align: center;
+    border-bottom: solid 2px black;
+    display:inline-block;
+    background:white;
+}
+
+.sectionHeader{
+    border-bottom:solid 2px grey;
+    padding:0.5em;
+    padding-left:1em;
+    background:white;
+    cursor:pointer;
+}
+
+.counter{
+    height:1.2em;
+    width:1.2em;
+    text-align:center;
+    border-radius:0.2em;
+    display:inline-block;
+    float:right;
+    margin-right:1em;
+    color:white;
+    padding:0.1em;
+    margin-top:-0.1em;
+}
+
+.triangle{
+    display:inline-block;
+}
+
+.sectionDrop{
+
+}
+
+.student{
+    width:100%;
+}
+
+#actionField{
+    position:absolute;
+    top: 3em;
+    right:0em;
+    background:white;
+    z-index:-1;
+    color:white;
+    margin:50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#tabBar{
+    z-index:100;
+    width:100%;
+    cursor:pointer;
+}
+
+.classSection{
+    height:70%;
+    min-width:90%;
+    display:inline-block;
+}
+
+.popup{
+
+}
+
+#random{
+    color:grey;
+    display:inline-block;
+    border:solid 1px grey;
+    border-radius:5px;
+    width:10em;
+    padding-left:1em;
+    padding-right:1em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    margin-bottom:2em;
+    cursor:pointer;
+}
+
+#red {
+    background:red;
+}
+
+#orange {
+    background:orange;
+}
+
+#green {
+    background:green;
+}
