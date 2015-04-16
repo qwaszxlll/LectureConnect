@@ -83,7 +83,7 @@ function rotateTriangle(id, open){
 }
 
 
-//Move Buttons
+//Move Buttons------------------------------------------------
 var uCount = 2;
 var lCount = 0;
 var aCount = 0;
@@ -175,10 +175,5 @@ function updateCounts(){
         rotateTriangle('#triangleA', false);
     }
 }
-
-
-$('.classSection').click(function(){
-    $('#sec1').src = 'graphics/popup1.png';
-})
 
 
