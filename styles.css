@@ -193,6 +193,7 @@ div{
     z-index:4;
     height:2em;
     float:right;
+    cursor:pointer;
 }
 
 #xButton:hover{
