@@ -7,4 +7,11 @@ $( window ).ready(function() {
     $('#actionField').css('height', screenHeight-headerHeight-100);
 
     $('#sideBar').resizable();
+    $('#popup1').fadeOut(0);
+    $('#sec1').click(function(){
+        $('#popup1').fadeIn();
+    })
+    $('#xButton').click(function(){
+        $('#popup1').fadeOut();
+    })
 });
