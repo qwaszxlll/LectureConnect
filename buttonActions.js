@@ -177,4 +177,8 @@ function updateCounts(){
 }
 
 
+$('.classSection').click(function(){
+    $('#sec1').src = 'graphics/popup1.png';
+})
+
 
