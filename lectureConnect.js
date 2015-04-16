@@ -5,4 +5,6 @@ $( window ).ready(function() {
     var headerHeight = $('#header').height();
     $('#actionField').css('width', screenWidth-sideBarWidth-100);
     $('#actionField').css('height', screenHeight-headerHeight-100);
+
+    $('#sideBar').resizable();
 });

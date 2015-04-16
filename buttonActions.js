@@ -77,3 +77,45 @@ $('#sectionA').click( function(){
     }
 })
 
+
+//Move Buttons
+var uCount = 2;
+var lCount = 0;
+var aCount = 0;
+$('#calebU').fadeOut(0);
+$('#shidanU').fadeOut(0);
+
+$('#calebA').click( function(){
+    $('#calebPower').appendTo('#answered');
+    updateCounts();
+    $('#calebA').fadeOut(0);
+    $('#calebL').fadeOut(0);
+    $('#calebU').fadeIn(0);
+})
+
+$('#calebL').click( function(){
+    $('#calebPower').appendTo('#markedForLater');
+    updateCounts();
+    $('#calebL').fadeOut(0);
+    $('#calebU').fadeOut(0);
+})
+
+$('#calebU').click( function(){
+    $('#calebPower').appendTo('#unanswered');
+    updateCounts();
+    $('#calebA').fadeIn(0);
+    $('#calebL').fadeIn(0);
+    $('#calebU').fadeOut(0);
+})
+
+function updateCounts(){
+    uCount = $("#unanswered > div").length;
+    lCount = $("#markedForLater > div").length;
+    aCount = $("#answered > div").length;
+    $('#red').text(uCount);
+    $('#orange').text(lCount);
+    $('#green').text(aCount);
+}
+
+
+
