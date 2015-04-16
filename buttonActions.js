@@ -51,31 +51,36 @@ $('#sectionL').click( function(){
 
 var aOpen = false
 $('#answered').fadeOut(0);
-$('#triangleA').css({
-    '-ms-transform': 'rotate(-90deg)', /* IE 9 */
-    '-webkit-transform': 'rotate(-90deg)', /* Chrome, Safari, Opera */
-    'transform': 'rotate(-90deg)'
-})
+rotateTriangle('#triangleA', false);
 
 $('#sectionA').click( function(){
     if (aOpen){
         $('#answered').slideUp();
-        $('#triangleA').css({
-            '-ms-transform': 'rotate(-90deg)', /* IE 9 */
-            '-webkit-transform': 'rotate(-90deg)', /* Chrome, Safari, Opera */
-            'transform': 'rotate(-90deg)'
-        })
+        rotateTriangle('#triangleA', false);
         aOpen = false;
     } else{
         $('#answered').slideDown();
-        $('#triangleA').css({
+        rotateTriangle('#triangleA', true);
+        aOpen = true;
+    }
+})
+
+function rotateTriangle(id, open){
+    if (open){
+        $(id).css({
             '-ms-transform': 'rotate(0deg)', /* IE 9 */
             '-webkit-transform': 'rotate(0deg)', /* Chrome, Safari, Opera */
             'transform': 'rotate(0deg)'
         })
-        aOpen = true;
+    } else{
+        $(id).css({
+            '-ms-transform': 'rotate(-90deg)', /* IE 9 */
+            '-webkit-transform': 'rotate(-90deg)', /* Chrome, Safari, Opera */
+            'transform': 'rotate(-90deg)'
+        })
     }
-})
+    
+}
 
 
 //Move Buttons
@@ -108,6 +113,29 @@ $('#calebU').click( function(){
     $('#calebU').fadeOut(0);
 })
 
+$('#shidanA').click( function(){
+    $('#shidanFootball').appendTo('#answered');
+    updateCounts();
+    $('#shidanA').fadeOut(0);
+    $('#shidanL').fadeOut(0);
+    $('#shidanU').fadeIn(0);
+})
+
+$('#shidanL').click( function(){
+    $('#shidanFootball').appendTo('#markedForLater');
+    updateCounts();
+    $('#shidanL').fadeOut(0);
+    $('#shidanU').fadeOut(0);
+})
+
+$('#shidanU').click( function(){
+    $('#shidanFootball').appendTo('#unanswered');
+    updateCounts();
+    $('#shidanA').fadeIn(0);
+    $('#shidanL').fadeIn(0);
+    $('#shidanU').fadeOut(0);
+})
+
 function updateCounts(){
     uCount = $("#unanswered > div").length;
     lCount = $("#markedForLater > div").length;
@@ -115,6 +143,26 @@ function updateCounts(){
     $('#red').text(uCount);
     $('#orange').text(lCount);
     $('#green').text(aCount);
+    if (uCount>0){
+        $('#unanswered').slideDown();
+        rotateTriangle('#triangleU', true);
+    } else{
+        rotateTriangle('#triangleU', false);
+    }
+
+    if (lCount>0){
+        $('#markedForLater').slideDown();
+        rotateTriangle('#triangleL', true);
+    } else{
+        rotateTriangle('#triangleL', false);
+    }
+
+    if (aCount>0){
+        $('#answered').slideDown();
+        rotateTriangle('#triangleA', true);
+    } else{
+        rotateTriangle('#triangleA', false);
+    }
 }
 
 
