@@ -92,6 +92,7 @@ $('#shidanU').fadeOut(0);
 
 $('#calebA').click( function(){
     $('#calebPower').appendTo('#answered');
+    moveStudent('#calebPower');
     updateCounts();
     $('#calebA').fadeOut(0);
     $('#calebL').fadeOut(0);
@@ -100,6 +101,7 @@ $('#calebA').click( function(){
 
 $('#calebL').click( function(){
     $('#calebPower').appendTo('#markedForLater');
+    moveStudent('#calebPower');
     updateCounts();
     $('#calebL').fadeOut(0);
     $('#calebU').fadeOut(0);
@@ -107,6 +109,7 @@ $('#calebL').click( function(){
 
 $('#calebU').click( function(){
     $('#calebPower').appendTo('#unanswered');
+    moveStudent('#calebPower');
     updateCounts();
     $('#calebA').fadeIn(0);
     $('#calebL').fadeIn(0);
@@ -115,6 +118,7 @@ $('#calebU').click( function(){
 
 $('#shidanA').click( function(){
     $('#shidanFootball').appendTo('#answered');
+    moveStudent('#shidanFootball');
     updateCounts();
     $('#shidanA').fadeOut(0);
     $('#shidanL').fadeOut(0);
@@ -123,6 +127,7 @@ $('#shidanA').click( function(){
 
 $('#shidanL').click( function(){
     $('#shidanFootball').appendTo('#markedForLater');
+    moveStudent('#shidanFootball');
     updateCounts();
     $('#shidanL').fadeOut(0);
     $('#shidanU').fadeOut(0);
@@ -130,11 +135,17 @@ $('#shidanL').click( function(){
 
 $('#shidanU').click( function(){
     $('#shidanFootball').appendTo('#unanswered');
+    moveStudent('#shidanFootball');
     updateCounts();
     $('#shidanA').fadeIn(0);
     $('#shidanL').fadeIn(0);
     $('#shidanU').fadeOut(0);
 })
+
+function moveStudent(id){
+    $(id).slideUp(0);
+    $(id).slideDown();
+}
 
 function updateCounts(){
     uCount = $("#unanswered > div").length;
