@@ -66,13 +66,49 @@
         </div>
         <div id='answered' class='sectionDrop'></div>
     </div>
+
     <div id='actionField'>
-        <img id='tabBar' src='graphics/tabBar3.png'>
+        <div class='tabs'>
+            <ul class='tabOptions'>
+                <li><div class='firstTab tab'>
+                    <a href='#raisedHandsTab'>Raised Hands</a>
+                </div></li>
+                <li><div class='tab'>
+                    <a href='#notFocusingTab'>Not Focusing</a>
+                </div></li>
+                <li class='active lastTab tab'>
+                    <a href='#overallTab' class='lastTab'>Overall</a>
+                </div></li>
+            </ul>
+        </div>
+        <div class='contents'>
+            <div id='raisedHandsTab'>
+                <img id='sec1' class='classSection' src='graphics/sec1.png'>
+            </div>
+            <div id='notFocusingTab'>
+                <img id='sec1' class='classSection' src='graphics/sec1.png'>
+            </div>
+            <div id='overallTab' class='active'>
+                <img id='sec1' class='classSection' src='graphics/sec1.png'>
+            </div>
+        </div>
+
+    <!--   <img id='tabBar' src='graphics/tabBar3.png'>
+      <!--   <img id='popup1' class='popup' src='popup1.png'>
+        <img id='popup2' class='popup' src='popup1.png'>
+        <img id='popup3' class='popup' src='popup1.png'>
+
+        <img id='sec1' class='classSection' src='graphics/sec1.png'>  -->
+
+        <!-- <div id='front'>Front</div> -->
+
+
+        <!--<img id='tabBar' src='graphics/tabBar3.png'>-->
       <!--   <img id='popup1' class='popup' src='popup1.png'>
         <img id='popup2' class='popup' src='popup1.png'>
         <img id='popup3' class='popup' src='popup1.png'> -->
 
-        <img id='sec1' class='classSection' src='graphics/sec1.png'>
+        <!--<img id='sec1' class='classSection' src='graphics/sec1.png'>-->
 
         <!-- <div id='front'>Front</div> -->
         <div id='random'>Call On Random</div>
@@ -81,4 +117,5 @@
 
   <script type="text/javascript" src="lectureConnect.js"></script>
   <script type="text/javascript" src="buttonActions.js"></script>
+  <script type="text/javascript" src="tabSelection.js"></script>
 </html>

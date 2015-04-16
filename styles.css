@@ -207,3 +207,68 @@ div{
 #green {
     background:green;
 }
+
+/* ------ TABS ------ */
+.tabs {
+    z-index:100;
+    width:100%;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.tabOptions:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tabOptions li {
+    margin:0px;
+    float:left;
+    list-style:none;
+}
+
+.tabOptions a {
+    padding:9px 15px;
+    display:inline-block;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px 0px 1px 1px;
+    background: white;
+    font-size:16px;
+    font-weight:200;
+    color:#4c4c4c;
+    text-decoration: none;
+    /*transition:all linear 0.15s;*/
+}
+.tabOptions .firstTab {
+    border-radius:5px 0px 0px 0px;
+}
+.tabOptions .lastTab {
+    border-radius:0px 5px 0px 0px;
+    border-width: 1px 1px 1px 1px;
+}
+.tabOptions a:hover {
+    background:black;
+    text-decoration:none;
+}
+li.active a, li.active a:hover {
+    background:#fff;
+    color:#4c4c4c;
+}
+
+.contents {
+    padding:15px;
+    border-radius:3px;
+    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+    background:#fff;
+}
+
+    .classSection {
+        display:none;
+    }
+
+    .classSection.active {
+        display:block;
+    }
+
