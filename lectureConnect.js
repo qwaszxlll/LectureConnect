@@ -4,15 +4,6 @@ $( window ).ready(function() {
     var screenHeight = $(window).height();
     var headerHeight = $('#header').height();
 
-<<<<<<< HEAD
-    var actionFieldWidth = screenWidth-sideBarWidth-100;
-    var tabWidth = actionFieldWidth/3;
-    $('#actionField').css('width', actionFieldWidth);
-    $('#actionField').css('height', screenHeight-headerHeight-60);
-    $('#rhTab').css('width', tabWidth);
-    $('#nfTab').css('width', tabWidth);
-    $('#ovTab').css('width', tabWidth);
-=======
     var actionFieldWidth = screenWidth-sideBarWidth-120;
     var tabWidth = actionFieldWidth/3;
     $('#actionField').css('width', actionFieldWidth);
@@ -21,8 +12,6 @@ $( window ).ready(function() {
     $('#nfTab').css('width', tabWidth);
     $('#ovTab').css('width', tabWidth);
     $('#actionField').resizable();
->>>>>>> gh-pages
-
 
     $('#sideBar').resizable();
     $('#popup1').fadeOut(0);
