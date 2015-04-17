@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Lecture Connect</title>
+    <link type="text/css" href="styles.css" rel="stylesheet" />
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+
+  </head>
+  <body>
+    <div id='header'>
+        <img id='logo' src='graphics/whiteLogo.png'>
+    </div>
+    <div id='sideBar'>
+        <div id='sideHeader'> Questions </div>
+
+        <div id='sectionU' class='sectionHeader'>
+            <img id='triangleU' class='triangle' src='graphics/triangle.png'>
+            Unanswered
+            <div id='red' class='counter'>2</div>
+        </div>
+        <div id='unanswered' class='sectionDrop'>
+            <div id='calebPower' class='student'>
+                <img class='qPic' src='graphics/calebPic.png'>
+                <div class='qContainer'>
+                    <div class='qTitle'> Power Series</div>
+                    <div class='qTime'> 5 min ago</div>
+                    <div class='qText'> If the recurrence relation for a has 3 terms instead of 2...</div>
+                    <img id='calebA' class='qButton' src='graphics/markAnsweredButton.png'>
+                    <img id='calebL' class='qButton' src='graphics/markForLaterButton.png'>
+                    <img id='calebU' class='qButton' src='graphics/markUnansweredButton.png'>
+                </div>
+                <div class='qName'> Caleb Lin</div>
+            </div>
+
+            <div id='shidanFootball' class='student'>
+                <img class='qPic' src='graphics/shidanPic.png'>
+                <div class='qContainer'>
+                    <div class='qTitle'> Favorite Sport</div>
+                    <div class='qTime'> 7 min ago</div>
+                    <div class='qText'> Do you like football?</div>
+                    <img id='shidanA' class='qButton' src='graphics/markAnsweredButton.png'>
+                    <img id='shidanL' class='qButton' src='graphics/markForLaterButton.png'>
+                    <img id='shidanU' class='qButton' src='graphics/markUnansweredButton.png'>
+                </div>
+                <div class='qName'>Shidan Xu</div>
+            </div>
+        </div>
+
+        <div id='sectionL' class='sectionHeader'>
+            <img id='triangleL' class='triangle' src='graphics/triangle.png'>
+            Marked For Later
+            <div id='orange' class='counter'>0</div>
+        </div>
+        <div id='markedForLater' class='sectionDrop'>
+        </div>
+
+        <div id='sectionA' class='sectionHeader'>
+            <img id='triangleA' class='triangle' src='graphics/triangle.png'>
+            Answered
+            <div id='green' class='counter'>0</div>
+        </div>
+        <div id='answered' class='sectionDrop'></div>
+    </div>
+    <div id='classmap'>
+        <div id='actionField'>
+            <div id='popup1'>
+                <img class='xButton' src='graphics/xbutton.png'>
+                <img class='popup' src='graphics/popup1.png'>
+            </div>
+            <div id='popup2'>
+                <img class='xButton' src='graphics/xbutton.png'>
+                <img class='popup' src='graphics/popup2.png'>
+            </div>
+            <div class='tabs'>
+                <div class='tabOptions'>
+                    <div class='row'>
+                        <div id='rhTab' class='rhTab tab'>
+                            <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
+                        </div>
+                        <div id='nfTab' class='nfTab tab'>
+                            <img id='nfIcon' src='graphics/iconNotFocusing.png'>
+                            Not Focusing
+                        </div>
+                        <div id='ovTab' class='ovTab lastTab tab active'>
+                            <span>Overall</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='tabContents'>
+                <div class='rhTab'>
+                    <img class='classSection' src='graphics/secR.png'>
+                </div>
+                <div class='nfTab'>
+                    <img class='classSection' src='graphics/secNF.png'>
+                </div>
+                <div class='ovTab active'>
+                    <img class='classSection' src='graphics/secO.png'>
+                </div>
+            </div>
+            <div id='random'>Call On Random</div>
+        </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="lectureConnect.js"></script>
+  <script type="text/javascript" src="buttonActions.js"></script>
+  <script type="text/javascript" src="tabSelection.js"></script>
+</html>
