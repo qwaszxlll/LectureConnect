@@ -10,7 +10,7 @@ $( window ).ready(function() {
     $('#popup1').fadeOut(0);
     $('#popup2').fadeOut(0);
 
-    $('#sec1').click(function(){
+    $('.classSection').click(function(){
         $('#popup1').fadeIn();
     })
     $('.xButton').click(function(){
