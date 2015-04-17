@@ -1,13 +1,9 @@
 $(document).ready(function() {
-    $('.tabs .tabOptions a').on('click', function(e)  {
-        var currentAttrValue = $(this).attr('href');
- 
-        // Show/Hide Tabs
-        $('.tabs ' + currentAttrValue).show().siblings().hide();
- 
-        // Change/remove current tab to active
-        $(this).parent('li').addClass('active').siblings().removeClass('active');
- 
+    $('.tabOptions div').on('click', function(e) {
+        var currentAttrValue = $(this).attr('id');
+
+        $('.active').removeClass('active');
+        $('.' + currentAttrValue).addClass('active')
         e.preventDefault();
     });
 });

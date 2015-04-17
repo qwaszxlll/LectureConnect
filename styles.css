@@ -154,6 +154,11 @@ div{
     cursor:pointer;
 }
 
+#classmap {
+    overflow-y:auto;
+    border:solid 5px red;
+}
+
 #actionField{
     position:absolute;
     top: 3em;
@@ -164,6 +169,7 @@ div{
     margin:50px;
     border-radius: 10px;
     text-align: center;
+    border:solid 5px red;
 }
 
 #tabBar{
@@ -244,67 +250,86 @@ div{
     background:green;
 }
 
+
 /* ------ TABS ------ */
 .tabs {
+    /*border:solid 5px red;*/
     z-index:100;
     width:100%;
     display:inline-block;
     cursor:pointer;
 }
 
-.tabOptions:after {
-    display:block;
-    clear:both;
-    content:'';
+.tabOptions {
+    margin: 0;
+    padding: 0;
 }
 
-.tabOptions li {
-    margin:0px;
-    float:left;
-    list-style:none;
-}
+    .tabOptions li {
+        float:left;
+        list-style:none;
+    }
 
-.tabOptions a {
-    padding:9px 15px;
-    display:inline-block;
-    border-style: solid;
-    border-color: lightgray;
-    border-width: 1px 0px 1px 1px;
-    background: white;
-    font-size:16px;
-    font-weight:200;
-    color:#4c4c4c;
-    text-decoration: none;
-    /*transition:all linear 0.15s;*/
-}
-.tabOptions .firstTab {
-    border-radius:5px 0px 0px 0px;
-}
-.tabOptions .lastTab {
-    border-radius:0px 5px 0px 0px;
-    border-width: 1px 1px 1px 1px;
-}
-.tabOptions a:hover {
-    background:black;
-    text-decoration:none;
-}
-li.active a, li.active a:hover {
-    background:#fff;
-    color:#4c4c4c;
-}
+    .tabOptions div {
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px 0px 1px 1px;
+        background: white;
+        height:60px;
+        width: 264px;
+        font-size:20px;
+        font-weight:200;
+        color:#4a4a4a;
+        text-align: center;
+        vertical-align: center;
+    }
 
-.contents {
+    .tabOptions div p{
+        position: absolute;
+        top: 50%;
+    }
+
+    .tabOptions #rhIcon{
+        width:20px;
+        height:27px;
+    }
+    .tabOptions #nfIcon{
+        width:31px;
+        height:27px;
+    }
+
+    .tabOptions .firstTab {
+        border-radius:5px 0px 0px 0px;
+    }
+    .tabOptions .lastTab {
+        border-width: 1px 1px 1px 1px;
+        border-radius:0px 5px 0px 0px;
+    }
+    .tabOptions .active, .tabOptions .tab:hover {
+        background:#4791dc;
+        color:white;
+    }
+
+.tabContents {
     padding:15px;
-    border-radius:3px;
-    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-    background:#fff;
+    /*border-radius:3px;*/
+    /*box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
+    z-index: 100;
+    background:white;
+    position: relative;
+    top:0;
+    left:0;    
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
 }
 
-    .classSection {
+    .tabContents .classSection {
+        width: 100%;
         display:none;
     }
 
-    .classSection.active {
+    .tabContents .active .classSection {
         display:block;
     }
 
