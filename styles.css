@@ -292,12 +292,12 @@ div{
         border-width: 1px 1px 1px 1px;
         border-radius:0px 5px 0px 0px;
     }
-    .tabOptions .active, .tabOptions .tab:hover {
+    .tabOptions .active{
         background:#4791dc;
         color:white;
     }
-    .tabOptions .active:hover {
-        background:#76a3ee
+    .tabOptions .tab:hover, .tabOptions .active:hover {
+        background:#a4bfed;
     }
     .tabOptions #rhIcon{
         width: 18px;
