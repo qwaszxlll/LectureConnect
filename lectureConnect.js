@@ -4,14 +4,14 @@ $( window ).ready(function() {
     var screenHeight = $(window).height();
     var headerHeight = $('#header').height();
 
-    var actionFieldWidth = screenWidth-sideBarWidth-100;
+    var actionFieldWidth = screenWidth-sideBarWidth-120;
     var tabWidth = actionFieldWidth/3;
     $('#actionField').css('width', actionFieldWidth);
-    $('#actionField').css('height', screenHeight-headerHeight-60);
+    $('#actionField').css('height', screenHeight-headerHeight-90);
     $('#rhTab').css('width', tabWidth);
     $('#nfTab').css('width', tabWidth);
     $('#ovTab').css('width', tabWidth);
-
+    $('#actionField').resizable();
 
     $('#sideBar').resizable();
     $('#popup1').fadeOut(0);
