@@ -76,37 +76,28 @@
                 <img class='xButton' src='graphics/xButton.png'>
                 <img class='popup' src='graphics/popup2.png'>
             </div>
-            <div class='tabOptions'>
+            <div class='tabOptions table'>
                 <div class='row'>
-                    <div id='rhTab' class='rhTab tab'>
-                        <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
-                    </div>
-                    <div id='nfTab' class='nfTab tab'>
-                        <img id='nfIcon' src='graphics/iconNotFocusing.png'>
-                        Not Focusing
-                    </div>
-                    <div id='ovTab' class='ovTab lastTab tab active'>
-                        <span>Overall</span>
-                    </div>
+                <div id='rhTab' class='rhTabSelected tab col'>
+                    <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
+                </div>
+                <div id='nfTab' class='nfTabSelected tab col'>
+                    <img id='nfIcon' src='graphics/iconNotFocusing.png'>
+                    Not Focusing
+                </div>
+                <div id='ovTab' class='ovTabSelected lastTab tab col active'>
+                    <span>Overall</span>
+                </div>
                 </div>
             </div>
-            <div class='tabContents'>
-                <div class='rhTab'>
-                    <img class='classSection' src='graphics/secR.png'>
-                </div>
-                <div class='nfTab'>
-                    <img class='classSection' src='graphics/secNF.png'>
-                </div>
-                <div class='ovTab active'>
-                    <img class='classSection' src='graphics/secO.png'>
-                </div>
-            </div>
+            <div class='tabContents table'></div>
             <div id='random'>Call On Random</div>
         </div>
     </div>
-  </body>
-
-  <script type="text/javascript" src="lectureConnect.js"></script>
-  <script type="text/javascript" src="buttonActions.js"></script>
-  <script type="text/javascript" src="tabSelection.js"></script>
+    </body>
+    <script type="text/javascript" src="classMap.js"></script>
+    <script type="text/javascript" src="lectureConnect.js"></script>
+    <script type="text/javascript" src="buttonActions.js"></script>
+    <script type="text/javascript" src="tabSelection.js"></script>
+  
 </html>

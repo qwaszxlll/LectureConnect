@@ -7,7 +7,7 @@ $( window ).ready(function() {
     var actionFieldWidth = screenWidth-sideBarWidth-120;
     var tabWidth = actionFieldWidth/3;
     $('#actionField').css('width', actionFieldWidth);
-    $('#actionField').css('height', screenHeight-headerHeight-90);
+    $('#actionField').css('height', screenHeight-headerHeight-120);
     $('#rhTab').css('width', tabWidth);
     $('#nfTab').css('width', tabWidth);
     $('#ovTab').css('width', tabWidth);
@@ -20,6 +20,7 @@ $( window ).ready(function() {
     $('.classSection').click(function(){
         $('#popup1').fadeIn();
     })
+
     $('.xButton').click(function(){
         $('#popup1').fadeOut();
         $('#popup2').fadeOut();
@@ -28,4 +29,13 @@ $( window ).ready(function() {
     $('#random').click(function(){
         $('#popup2').fadeIn();
     })
+
+    /* ------ CLASS MAP ------ */
+    var overall = new ClassMap($('.tabContents.table'));
+    $('.ovTabSelected').addClass('active');
+
+    $('.tabContents.table .block').on('click', function(e) {
+        $('#popup1').fadeIn();
+    });
+
 });
