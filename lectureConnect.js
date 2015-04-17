@@ -12,6 +12,7 @@ $( window ).ready(function() {
     $('#nfTab').css('width', tabWidth);
     $('#ovTab').css('width', tabWidth);
 
+
     $('#sideBar').resizable();
     $('#popup1').fadeOut(0);
     $('#popup2').fadeOut(0);
