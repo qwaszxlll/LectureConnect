@@ -169,7 +169,6 @@ div{
     margin:50px;
     border-radius: 10px;
     text-align: center;
-    border:solid 5px red;
 }
 
 #tabBar{
@@ -275,27 +274,22 @@ div{
         border-color: gray;
         border-width: 1px 0px 1px 1px;
         background: white;
-        height:60px;
+        height:50px;
         width: 264px;
-        font-size:20px;
+        font-size:18px;
         font-weight:200;
         color:#4a4a4a;
         text-align: center;
         vertical-align: center;
     }
 
-    .tabOptions div p{
-        position: absolute;
-        top: 50%;
-    }
-
     .tabOptions #rhIcon{
-        width:20px;
-        height:27px;
+        width: 18px;
+        height: 24px;
     }
     .tabOptions #nfIcon{
-        width:31px;
-        height:27px;
+        width:26px;
+        height:24px;
     }
 
     .tabOptions .firstTab {
@@ -314,14 +308,13 @@ div{
     padding:15px;
     /*border-radius:3px;*/
     /*box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
-    z-index: 100;
     background:white;
     position: relative;
     top:0;
     left:0;    
-    max-width: 100%;
-    max-height: 100%;
-    margin:auto;
+    max-width: 70%;
+    max-height: 70%;
+    margin:auto
 }
 
     .tabContents .classSection {
@@ -330,6 +323,8 @@ div{
     }
 
     .tabContents .active .classSection {
+        max-width:100%;
+        max-height:100%;
         display:block;
     }
 
