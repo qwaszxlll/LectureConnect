@@ -152,7 +152,7 @@ function updateCounts(){
     lCount = $("#markedForLater > div").length;
     aCount = $("#answered > div").length;
     $('#red').text(uCount);
-    $('#orange').text(lCount);
+    $('#lightblue').text(lCount);
     $('#green').text(aCount);
     if (uCount>0){
         $('#unanswered').slideDown();
