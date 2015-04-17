@@ -163,19 +163,11 @@ div{
     position:absolute;
     top: 2em;
     right:0em;
-<<<<<<< HEAD
-    height: 70vh;
-    background:white;
-    z-index:1;
-    color:white;
-    margin:50px;
-=======
     height: 60vh;
     background:white;
     z-index:1;
     color:white;
     margin:60px;
->>>>>>> gh-pages
     border-radius: 10px;
     text-align: center;
 }
@@ -260,18 +252,11 @@ div{
 
 
 /* ------ TABS ------ */
-.tabs {
-    /*border:solid 5px red;*/
-    z-index:100;
-    width:100%;
-    display:inline-block;
-    cursor:pointer;
-}
-
 .tabOptions {
     display: table;
     margin: 0;
     padding: 0;
+    cursor:pointer;
 }
     .tabOptions .row {
         display: table-row;
