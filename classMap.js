@@ -6,7 +6,7 @@ var Block = function (rhCount, nfCount) {
 // array = 2d array containing Block instant
 var ClassMap = function (div, array) {
     var widthRange = parseInt($('#actionField').css('width'), 10)-200,
-        heightRange = Math.max(60,parseInt($('#actionField').css('height'), 10)-300);
+        heightRange = Math.max(40,parseInt($('#actionField').css('height'), 10)-300);
     var DEFAULT_ROW_COUNT = 2,
         DEFAULT_COL_COUNT = 3;
     var rowCount = array? array.length: DEFAULT_ROW_COUNT;
@@ -30,7 +30,7 @@ var ClassMap = function (div, array) {
             "</div>");
         }
     }
-    div.append("<div class='row'><div class='col dummy'></div><div class='col'>Front</div><div class='col dummy'></div></div>")
+    div.append("<div class='row'><div class='col dummy'></div><div class='col' style='height: 40px;'>Front</div><div class='col dummy'></div></div>")
 
     return {
         getBlock: function(row, col) {

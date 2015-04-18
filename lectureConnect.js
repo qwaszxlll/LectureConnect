@@ -7,7 +7,7 @@ $( window ).ready(function() {
     var actionFieldWidth = screenWidth-sideBarWidth-120;
     var tabWidth = actionFieldWidth/3;
     $('#actionField').css('width', actionFieldWidth);
-    $('#actionField').css('height', screenHeight-headerHeight-120);
+    $('#actionField').css('height', screenHeight-headerHeight-100);
     $('#rhTab').css('width', tabWidth);
     $('#nfTab').css('width', tabWidth);
     $('#ovTab').css('width', tabWidth);
