@@ -296,7 +296,7 @@ div{
         width:26px;
         height:24px;
     }
-
+/* ------ CLASS MAP ------ */
 .tabContents {
     padding:15px;
     /*border-radius:3px;*/
@@ -314,9 +314,6 @@ div{
         height: 50vh;
         display:none;
     }
-
-
-/* ------ CLASS MAP ------ */
 .tabContents.table{ 
     border-collapse:separate;
     border-spacing:25px;

@@ -175,5 +175,3 @@ function updateCounts(){
         rotateTriangle('#triangleA', false);
     }
 }
-
-

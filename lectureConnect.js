@@ -32,6 +32,7 @@ $( window ).ready(function() {
 
     /* ------ CLASS MAP ------ */
     var overall = new ClassMap($('.tabContents.table'));
+    // set Overall tab as default
     $('.ovTabSelected').addClass('active');
 
     $('.tabContents.table .block').on('click', function(e) {

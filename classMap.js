@@ -33,6 +33,7 @@ var ClassMap = function (div, array) {
     div.append("<div class='row'><div class='col dummy'></div><div class='col' style='height: 40px;'>Front</div><div class='col dummy'></div></div>")
 
     return {
+        // get the div representing a specific block
         getBlock: function(row, col) {
             var rowDiv = div.children('.row')[row];
             return $(rowDiv).children('.col')[col];
