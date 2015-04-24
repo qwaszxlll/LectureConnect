@@ -197,7 +197,7 @@ div{
     cursor:pointer;
 }
 
-#popup1{
+#popup0, #popup1, #popup2{
     border:solid 2px gray;
     z-index:3;
     position:absolute;
@@ -207,7 +207,7 @@ div{
     padding:1em;
 }
 
-#popup2{
+#popup3{
     border:solid 2px gray;
     z-index:3;
     position:absolute;
