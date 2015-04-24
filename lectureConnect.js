@@ -17,6 +17,13 @@ $( window ).ready(function() {
     $('#popup1').fadeOut(0);
     $('#popup2').fadeOut(0);
 
+    $('#popup2').click(function(e){
+        e.stopPropagation();
+    })
+    $('#popup1').click(function(e){
+        e.stopPropagation();
+    })
+
     $('.classSection').click(function(e){
         $('#popup1').fadeIn();
         e.stopPropagation();
