@@ -17,8 +17,18 @@ $( window ).ready(function() {
     $('#popup1').fadeOut(0);
     $('#popup2').fadeOut(0);
 
-    $('.classSection').click(function(){
+    $('.classSection').click(function(e){
         $('#popup1').fadeIn();
+        e.stopPropagation();
+    })
+
+    $('#actionField').click(function(){
+        if ($('#popup1').css('display') != 'none'){
+            $('#popup1').fadeOut();
+        }
+        if ($('#popup2').css('display') != 'none'){
+            $('#popup2').fadeOut();
+        }
     })
 
     $('.xButton').click(function(){
@@ -26,8 +36,9 @@ $( window ).ready(function() {
         $('#popup2').fadeOut();
     })
 
-    $('#random').click(function(){
+    $('#random').click(function(e){
         $('#popup2').fadeIn();
+        e.stopPropagation();
     })
 
     /* ------ CLASS MAP ------ */
@@ -37,6 +48,7 @@ $( window ).ready(function() {
 
     $('.tabContents.table .block').on('click', function(e) {
         $('#popup1').fadeIn();
+        e.stopPropagation();
     });
 
 });
