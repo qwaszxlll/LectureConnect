@@ -151,9 +151,9 @@ function updateCounts(){
     uCount = $("#unanswered > div").length;
     lCount = $("#markedForLater > div").length;
     aCount = $("#answered > div").length;
-    $('#red').text(uCount);
-    $('#lightblue').text(lCount);
-    $('#green').text(aCount);
+    $('.yellow.counter').text(uCount);
+    $('.lightblue.counter').text(lCount);
+    $('.gray.counter').text(aCount);
     if (uCount>0){
         $('#unanswered').slideDown();
         rotateTriangle('#triangleU', true);

@@ -30,7 +30,7 @@ var ClassMap = function (div, array) {
             "</div>");
         }
     }
-    div.append("<div class='row'><div class='col dummy'></div><div class='col' style='height: 40px;'>Front</div><div class='col dummy'></div></div>")
+    div.append("<div class='row'><div class='col dummy'></div><div class='col nonHoverable' style='height: 40px;'>Front</div><div class='col dummy'></div></div>")
 
     return {
         // get the div representing a specific block
