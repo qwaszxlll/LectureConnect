@@ -153,7 +153,7 @@ function updateCounts(){
     aCount = $("#answered > div").length;
     $('.yellow.counter').text(uCount);
     $('.lightblue.counter').text(lCount);
-    $('.gray.counter').text(aCount);
+    $('.green.counter').text(aCount);
     if (uCount>0){
         $('#unanswered').slideDown();
         rotateTriangle('#triangleU', true);
