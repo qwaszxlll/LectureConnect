@@ -197,14 +197,14 @@ div{
 
 #actionField{
     position:absolute;
+    border-radius:10px;
     top: 2em;
     right:0em;
-    height: 60vh;
+    height:90%;
     background:white;
     z-index:1;
     color:white;
     margin:60px;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -214,43 +214,47 @@ div{
     cursor:pointer;
 }
 
-#popup1{
-    border:solid 2px gray;
-    z-index:3;
-    position:absolute;
-    width:50vw;
-    margin-left:3vw;
+#popup{
+    z-index:1;
+    position:relative;
+    width:100%;
     background:white;
-    padding:1em;
+    padding-top:3em;
 }
 
-#popup2{
-    border:solid 2px gray;
-    z-index:3;
-    position:absolute;
-    width:50vw;
-    margin-left:3vw;
-    background:white;
-    padding:1em;
-}
-
-.xButton{
-    z-index:4;
-    height:2em;
-    float:right;
+.backButton{
+    z-index:2;
+    color:white;
+    display:inline-block;
+    border:solid 1px gray;
+    border-radius:5px;
+    width:50%;
+    padding-left:1em;
+    padding-right:1em;
+    padding-top:1em;
+    padding-bottom:1em;
+    margin-top:1em;
     cursor:pointer;
+    position:relative;
 }
 
-.xButton:hover{
+.backButton:hover{
     opacity:0.7;
 }
-.popup{
+
+.title{
     z-index:1;
-    width:50vw;
+    font-weight:500;
+    font-size:1.6em;
+    width:100%;
+    text-align: center;
+    color: gray;
+    display:inline-block;
+    padding:15px;
 }
 
 #random{
-    color:gray;
+    color:white;
     display:inline-block;
     border:solid 1px gray;
     border-radius:5px;
@@ -265,6 +269,32 @@ div{
 
 #random:hover{
     opacity:0.7;
+}
+
+.randomButton {
+    height:50vh;
+}
+
+.map {
+    margin-top:-2em;
+    height:10vh;
+}
+
+.mapBox{
+    width:100%;
+}
+
+.seatMap{
+    margin-bottom:15px;
+}
+
+.contentPic {
+    height:30vh;
+}
+
+.scroll {
+    display:default;
+    overflow-x:scroll;
 }
 
 /* ------ COLORS ------ */
@@ -293,6 +323,7 @@ div{
     margin: 0px;
     padding: 0;
     cursor:pointer;
+    width:100%;
 }
     .tabOptions .tab {
         height:60px;
@@ -310,15 +341,11 @@ div{
         vertical-align: middle;
     }
     .tabOptions #rhTab {
-        border-radius:5px 0px 0px 0px;
+        cursor:pointer;
     }
     .tabOptions #nfTab {
         border-width: 1px 1px 1px 1px;
-        border-radius:0px 5px 0px 0px;
-    }
-    .tabOptions #ovTab {
-        border-width: 1px 1px 1px 1px;
-        border-radius:0px 5px 0px 0px;
+        cursor:pointer;
     }
     .tabOptions .active{
         background:#4791dc;
@@ -371,9 +398,13 @@ div{
         color:white;
         opacity: 0.5;
     }
+    .tabContents.table .col.nonHoverable {
+        background-color:gray;
+        opacity:0.6;
+        color:white;
+    }
     .tabContents.table .col.nonHoverable:hover {
-        color: #4a4a4a;
-        opacity: 1;
+        opacity: 0.6;
     }
     .tabContents.table .col.dummy{
         background: white;
@@ -391,11 +422,20 @@ div{
     .tabContents.table .counter.alwaysOn {
         display: block;
     }
+    .tabContents .block{
+        cursor:pointer;
+    }
     .tabContents .blockRhIcon{
+        cursor:pointer;
         width:13px;
         height:16px;
+        margin-right:7px;
+    }
+    .tabContents .counter{
+        cursor:pointer;
     }
     .tabContents .blockNfIcon{
+        cursor:pointer;
         width:20px;
         height:16px;
     }
