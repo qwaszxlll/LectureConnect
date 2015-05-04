@@ -17,37 +17,23 @@ $( window ).ready(function() {
     $('#actionField').resizable();
 
     $('#sideBar').resizable();
-    $('#popup1').fadeOut(0);
-    $('#popup2').fadeOut(0);
-
-    $('#popup2').click(function(e){
-        e.stopPropagation();
-    })
-    $('#popup1').click(function(e){
-        e.stopPropagation();
-    })
 
     $('.classSection').click(function(e){
         $('#popup1').fadeIn();
         e.stopPropagation();
     })
 
-    $('#actionField').click(function(){
-        if ($('#popup1').css('display') != 'none'){
-            $('#popup1').fadeOut();
-        }
-        if ($('#popup2').css('display') != 'none'){
-            $('#popup2').fadeOut();
-        }
-    })
-
-    $('.xButton').click(function(){
-        $('#popup1').fadeOut();
-        $('#popup2').fadeOut();
+    $('.backButton').click(function(){
+        $('.section').hide(function(){
+            $('.randomPopup').hide();
+            $('.classroom').fadeIn();
+        });
     })
 
     $('#random').click(function(e){
-        $('#popup2').fadeIn();
+        $('.classroom').hide();
+        $('.section').hide();
+        $('.randomPopup').fadeIn();
         e.stopPropagation();
     })
 
@@ -55,6 +41,8 @@ $( window ).ready(function() {
     var overall = new ClassMap($('.tabContents.table'));
     // set Overall tab as default
     $('.ovTabSelected').addClass('alwaysOn');
+    $('.section').hide();
+    $('.randomPopup').hide();
 
     $('.tabContents.table .block').on('click', function(e) {
         // Here we want the separation of two screens to show up
@@ -62,17 +50,18 @@ $( window ).ready(function() {
         if($('#nfTab').hasClass('active')){
             $('.nf').show()
             $('.rh').hide()
-            $('#popup1').fadeIn();
+            $('.classroom').hide();
+            $('.section').fadeIn();
         }
         else{
             $('#rhTab').click();
             $('.rh').show()
             $('.nf').hide()
-            $('#popup1').fadeIn();
+            $('.classroom').hide();
+            $('.section').fadeIn();
         }
 
         // $('#popup1').fadeIn();
         e.stopPropagation();
     });
-
 });

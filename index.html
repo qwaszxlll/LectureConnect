@@ -68,47 +68,44 @@
     </div>
     <div id='classmap'>
         <div id='actionField'>
-            <div id='popup1'>
-                <img class='xButton' src='graphics/xButton.png'>
-                <div class='tabOptions table'>
-                    <div class='row'>
-                        <div id='rhTab' class='rhTabSelected tab col'>
-                            <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
-                        </div>
-                        <div id='nfTab' class='nfTabSelected tab col'>
-                            <img id='nfIcon' src='graphics/iconNotFocusing.png'>
-                            Not Focusing
-                        </div>
-                    </div>
+            <div class='classroom title'>Classroom Overview</div>
+            <div class=' classroom tabContents table'></div>
+            <div id='random' class='classroom lightblue'>Call On Random</div> 
 
-                    <!-- Change the images here to reflect the two -->
-                    <img class='popup nf' src='graphics/popup1.png'>
-                    <img class='popup rh' src='graphics/popup2.png'>
-                
-                </div>
-            </div>
-
-
-            <div id='popup2'>
-                <img class='xButton' src='graphics/xButton.png'>
-                <img class='popup' src='graphics/popup2.png'>
-            </div>
-            <!-- <div class='tabOptions table'>
+            <div class='section title'>Section Overview</div>
+            <div class='section tabOptions table'>
                 <div class='row'>
-                <div id='rhTab' class='rhTabSelected tab col'>
-                    <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
+                    <div id='rhTab' class='rhTabSelected tab col'>
+                        <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
+                    </div>
+                    <div id='nfTab' class='nfTabSelected lastTab tab col active'>
+                        <img id='nfIcon' src='graphics/iconNotFocusing.png'>
+                        Not Focusing
+                    </div>
                 </div>
-                <div id='nfTab' class='nfTabSelected tab col'>
-                    <img id='nfIcon' src='graphics/iconNotFocusing.png'>
-                    Not Focusing
+            </div>
+
+            <div id='popup' class='section'>
+                <div class='nf'>
+                    <div class='mapBox'>
+                        <img class='nf map' src='graphics/map.png'>
+                    </div>
+                    <div>
+                        <img class='nf contentPic seatMap' src='graphics/seatMap.png'>
+                    </div>
                 </div>
-                <div id='ovTab' class='ovTabSelected lastTab tab col active'>
-                    Overall
+                <div class='rh'>
+                    <img class='rh map' src='graphics/map.png'>
+                    <div class='scroll'>
+                        <img class='rh contentPic' src='graphics/ppl.png'>
+                    </div>
                 </div>
-                </div>
-            </div> -->
-            <div class='tabContents table'></div>
-            <div id='random'>Call On Random</div>
+            </div>
+            <div class='backButton section green'>Back to Class View</div>
+
+            <div class='randomPopup title'>Random Student</div>
+            <img class='randomPopup randomButton' src='graphics/randomPopup.png'>
+            <div class='backButton randomPopup green'>Done</div> 
         </div>
     </div>
     </body>
