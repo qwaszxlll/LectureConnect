@@ -410,6 +410,7 @@ div{
         cursor:pointer;
         width:13px;
         height:16px;
+        margin-right:7px;
     }
     .tabContents .counter{
         cursor:pointer;
