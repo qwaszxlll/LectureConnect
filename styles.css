@@ -180,6 +180,7 @@ div{
 
 #actionField{
     position:absolute;
+    border-radius:10px;
     top: 2em;
     right:0em;
     height:90%;
