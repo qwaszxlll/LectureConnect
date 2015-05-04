@@ -295,6 +295,8 @@ div{
 .scroll {
     display:default;
     overflow-x:scroll;
+    margin-left:1em;
+    margin-right:1em;
 }
 
 /* ------ COLORS ------ */
