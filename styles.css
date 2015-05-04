@@ -208,7 +208,7 @@ div{
     z-index:2;
     color:white;
     display:inline-block;
-    border:solid 1px #a9d777;
+    border:solid 1px gray;
     border-radius:5px;
     width:50%;
     padding-left:1em;
@@ -238,6 +238,7 @@ div{
 #random{
     color:white;
     display:inline-block;
+    border:solid 1px gray;
     border-radius:5px;
     width:10em;
     padding-left:1em;
@@ -322,16 +323,12 @@ div{
         vertical-align: middle;
     }
     .tabOptions #rhTab {
-        /*border-radius:5px 0px 0px 0px;*/
+        cursor:pointer;
     }
     .tabOptions #nfTab {
         border-width: 1px 1px 1px 1px;
-        /*border-radius:0px 5px 0px 0px;*/
+        cursor:pointer;
     }
-    /*.tabOptions #ovTab {
-        border-width: 1px 1px 1px 1px;
-        border-radius:0px 5px 0px 0px;
-    }*/
     .tabOptions .active{
         background:#4791dc;
         color:white;
@@ -406,11 +403,19 @@ div{
     .tabContents.table .counter.alwaysOn {
         display: block;
     }
+    .tabContents .block{
+        cursor:pointer;
+    }
     .tabContents .blockRhIcon{
+        cursor:pointer;
         width:13px;
         height:16px;
     }
+    .tabContents .counter{
+        cursor:pointer;
+    }
     .tabContents .blockNfIcon{
+        cursor:pointer;
         width:20px;
         height:16px;
     }
