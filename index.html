@@ -16,7 +16,11 @@
         <img id='logo' src='graphics/whiteLogo.png'>
     </div>
     <div id='sideBar'>
-        <div id='sideHeader'> Questions </div>
+        <div id='sideHeader'> 
+            Questions
+            <div class='doodooButtons'><img id='redo' src='graphics/redo.png'></div>
+            <div class='doodooButtons'><img id='undo' src='graphics/undo.png'></div>
+        </div>
 
         <div id='sectionU' class='sectionHeader'>
             <img id='triangleU' class='triangle' src='graphics/triangle.png'>
@@ -30,9 +34,9 @@
                     <div class='qTitle'> Power Series</div>
                     <div class='qTime'> 5 min ago</div>
                     <div class='qText'> If the recurrence relation for a has 3 terms instead of 2...</div>
-                    <img id='calebA' class='qButton' src='graphics/markAnsweredButton.png'>
-                    <img id='calebL' class='qButton' src='graphics/markForLaterButton.png'>
-                    <img id='calebU' class='qButton' src='graphics/markUnansweredButton.png'>
+                    <img id='calebA' class='qButton L U hideA' src='graphics/markAnsweredButton.png'>
+                    <img id='calebL' class='qButton U A hideL' src='graphics/markForLaterButton.png'>
+                    <img id='calebU' class='qButton L A hideU' src='graphics/markUnansweredButton.png'>
                 </div>
                 <div class='qName'> Caleb Lin</div>
             </div>
@@ -43,9 +47,9 @@
                     <div class='qTitle'> Favorite Sport</div>
                     <div class='qTime'> 7 min ago</div>
                     <div class='qText'> Do you like football?</div>
-                    <img id='shidanA' class='qButton' src='graphics/markAnsweredButton.png'>
-                    <img id='shidanL' class='qButton' src='graphics/markForLaterButton.png'>
-                    <img id='shidanU' class='qButton' src='graphics/markUnansweredButton.png'>
+                    <img id='shidanA' class='qButton L U hideA' src='graphics/markAnsweredButton.png'>
+                    <img id='shidanL' class='qButton U A hideL' src='graphics/markForLaterButton.png'>
+                    <img id='shidanU' class='qButton L A hideU' src='graphics/markUnansweredButton.png'>
                 </div>
                 <div class='qName'>Shidan Xu</div>
             </div>
@@ -112,6 +116,7 @@
         </div>
     </div>
     </body>
+    <script type="text/javascript" src="actionQueue.js"></script>
     <script type="text/javascript" src="classMap.js"></script>
     <script type="text/javascript" src="lectureConnect.js"></script>
     <script type="text/javascript" src="buttonActions.js"></script>

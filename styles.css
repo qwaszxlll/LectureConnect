@@ -73,6 +73,23 @@ div{
     display:inline-block;
     background:white;
 }
+    #sideHeader .doodooButtons{
+        float: right;
+        padding:0px;
+        margin:0px;
+    }
+    #sideHeader .doodooButtons .enabled{
+        opacity: 0.6;
+    }
+    #sideHeader .doodooButtons .enabled:hover{
+        opacity: 1;
+    }
+    #sideHeader .doodooButtons .disabled{
+        opacity: 0.1;
+    }
+    #undo,#redo{
+        width:70%;
+    }
 
 .sectionHeader{
     border-bottom:solid 2px gray;

@@ -83,63 +83,47 @@ function rotateTriangle(id, open){
 }
 
 
+//Doodoo Buttons------------------------------------------------
+var queue = new ActionQueue();
+queue.updateDoodoo();
+
+$('#undo').click(function(){
+    queue.undo()
+})
+$('#redo').click(function(){
+    queue.redo()
+})
+
 //Move Buttons------------------------------------------------
 var uCount = 2;
 var lCount = 0;
 var aCount = 0;
-$('#calebU').fadeOut(0);
-$('#shidanU').fadeOut(0);
+$('.hideU').fadeOut(0);
 
-$('#calebA').click( function(){
-    $('#calebPower').appendTo('#answered');
-    moveStudent('#calebPower');
-    updateCounts();
-    $('#calebA').fadeOut(0);
-    $('#calebL').fadeOut(0);
-    $('#calebU').fadeIn(0);
-})
+var idMap = {'A': '#answered',
+             'U': '#unanswered',
+             'L': '#markedForLater'
+            }
 
-$('#calebL').click( function(){
-    $('#calebPower').appendTo('#markedForLater');
-    moveStudent('#calebPower');
-    updateCounts();
-    $('#calebL').fadeOut(0);
-    $('#calebU').fadeOut(0);
-})
+$('.qButton').click( function(e){
+    var id = '#' + $(this).parents().closest('.student').attr('id');
+    var from = '#' + $(this).parents().closest('.sectionDrop').attr('id');
+    var to = $(this).attr('id');
+    console.log(to);
+        to = to[to.length-1];
+    console.log(to);
 
-$('#calebU').click( function(){
-    $('#calebPower').appendTo('#unanswered');
-    moveStudent('#calebPower');
+    $(id).appendTo(idMap[to]);
+    moveStudent(id);
     updateCounts();
-    $('#calebA').fadeIn(0);
-    $('#calebL').fadeIn(0);
-    $('#calebU').fadeOut(0);
-})
+    var toBeOut = id + ' .hide' + to,
+        toBeIn = id + ' .' + to;
 
-$('#shidanA').click( function(){
-    $('#shidanFootball').appendTo('#answered');
-    moveStudent('#shidanFootball');
-    updateCounts();
-    $('#shidanA').fadeOut(0);
-    $('#shidanL').fadeOut(0);
-    $('#shidanU').fadeIn(0);
-})
+    $(toBeOut).fadeOut(0);
+    $(toBeIn).fadeIn(0);    
 
-$('#shidanL').click( function(){
-    $('#shidanFootball').appendTo('#markedForLater');
-    moveStudent('#shidanFootball');
-    updateCounts();
-    $('#shidanL').fadeOut(0);
-    $('#shidanU').fadeOut(0);
-})
-
-$('#shidanU').click( function(){
-    $('#shidanFootball').appendTo('#unanswered');
-    moveStudent('#shidanFootball');
-    updateCounts();
-    $('#shidanA').fadeIn(0);
-    $('#shidanL').fadeIn(0);
-    $('#shidanU').fadeOut(0);
+    var action = new Action(id,from,idMap[to]);
+    queue.addAction(action);
 })
 
 function moveStudent(id){
