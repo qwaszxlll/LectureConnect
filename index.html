@@ -70,13 +70,30 @@
         <div id='actionField'>
             <div id='popup1'>
                 <img class='xButton' src='graphics/xButton.png'>
-                <img class='popup' src='graphics/popup1nf.png'>
+                <div class='tabOptions table'>
+                    <div class='row'>
+                        <div id='rhTab' class='rhTabSelected tab col'>
+                            <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
+                        </div>
+                        <div id='nfTab' class='nfTabSelected tab col'>
+                            <img id='nfIcon' src='graphics/iconNotFocusing.png'>
+                            Not Focusing
+                        </div>
+                    </div>
+
+                    <!-- Change the images here to reflect the two -->
+                    <img class='popup nf' src='graphics/popup1.png'>
+                    <img class='popup rh' src='graphics/popup2.png'>
+                
+                </div>
             </div>
+
+
             <div id='popup2'>
                 <img class='xButton' src='graphics/xButton.png'>
                 <img class='popup' src='graphics/popup2.png'>
             </div>
-            <div class='tabOptions table'>
+            <!-- <div class='tabOptions table'>
                 <div class='row'>
                 <div id='rhTab' class='rhTabSelected tab col'>
                     <img id='rhIcon' src='graphics/iconRaisedHand.png'> Raised Hands
@@ -89,7 +106,7 @@
                     Overall
                 </div>
                 </div>
-            </div>
+            </div> -->
             <div class='tabContents table'></div>
             <div id='random'>Call On Random</div>
         </div>

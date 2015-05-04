@@ -5,7 +5,10 @@ $( window ).ready(function() {
     var headerHeight = $('#header').height();
 
     var actionFieldWidth = screenWidth-sideBarWidth-120;
-    var tabWidth = actionFieldWidth/3;
+    var tabWidth = actionFieldWidth/2;
+
+    // var tabWidth = $('.popup1').width/2;
+
     $('#actionField').css('width', actionFieldWidth);
     $('#actionField').css('height', screenHeight-headerHeight-100);
     $('#rhTab').css('width', tabWidth);
@@ -51,10 +54,24 @@ $( window ).ready(function() {
     /* ------ CLASS MAP ------ */
     var overall = new ClassMap($('.tabContents.table'));
     // set Overall tab as default
-    $('.ovTabSelected').addClass('active');
+    $('.ovTabSelected').addClass('alwaysOn');
 
     $('.tabContents.table .block').on('click', function(e) {
-        $('#popup1').fadeIn();
+        // Here we want the separation of two screens to show up
+
+        if($('#nfTab').hasClass('active')){
+            $('.nf').show()
+            $('.rh').hide()
+            $('#popup1').fadeIn();
+        }
+        else{
+            $('#rhTab').click();
+            $('.rh').show()
+            $('.nf').hide()
+            $('#popup1').fadeIn();
+        }
+
+        // $('#popup1').fadeIn();
         e.stopPropagation();
     });
 

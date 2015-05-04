@@ -4,7 +4,16 @@ $(document).ready(function() {
         var currentAttrValue = $(this).attr('id') + 'Selected';
 
         $('.active').removeClass('active');
-        $('.' + currentAttrValue).addClass('active')
+        $('.' + currentAttrValue).addClass('active');
+
+        if($(this).attr('id') == "rhTab"){
+        	$('.rh').show();
+        	$('.nf').hide();
+        }
+        else{
+        	$('.nf').show();
+        	$('.rh').hide();
+        }
         e.preventDefault();
     });
 });
